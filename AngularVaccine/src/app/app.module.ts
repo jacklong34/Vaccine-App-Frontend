@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
+import { RouterModule} from "@angular/router";
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -14,13 +14,21 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
 import { HomeNavComponent } from './Components/home-nav/home-nav.component';
 import { LandingComponent } from './Components/landing/landing.component';
+import { HomeComponent } from './Components/home/home.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatCardModule } from '@angular/material/card';
+import { MatMenuModule } from '@angular/material/menu';
+import { PharmacyComponent } from './Components/pharmacy/pharmacy.component';
+import { from } from 'rxjs';
 
 @NgModule({
   declarations: [
     AppComponent,
     MainNavComponent,
     HomeNavComponent,
-    LandingComponent
+    LandingComponent,
+    HomeComponent,
+    PharmacyComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +40,11 @@ import { LandingComponent } from './Components/landing/landing.component';
     MatButtonModule,
     MatSidenavModule,
     MatIconModule,
-    MatListModule
+    MatListModule,
+    MatGridListModule,
+    MatCardModule,
+    MatMenuModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
