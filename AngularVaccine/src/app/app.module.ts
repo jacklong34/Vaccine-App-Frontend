@@ -19,7 +19,9 @@ import { MatGridListModule } from '@angular/material/grid-list';
 import { MatCardModule } from '@angular/material/card';
 import { MatMenuModule } from '@angular/material/menu';
 import { PharmacyComponent } from './Components/pharmacy/pharmacy.component';
-import { from } from 'rxjs';
+import { AuthModule } from "@auth0/auth0-angular";
+import { AuthButtonComponent } from './Components/auth-button/auth-button.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -28,7 +30,8 @@ import { from } from 'rxjs';
     HomeNavComponent,
     LandingComponent,
     HomeComponent,
-    PharmacyComponent
+    PharmacyComponent,
+    AuthButtonComponent
   ],
   imports: [
     BrowserModule,
@@ -44,7 +47,11 @@ import { from } from 'rxjs';
     MatGridListModule,
     MatCardModule,
     MatMenuModule,
-    RouterModule
+    RouterModule,
+    AuthModule.forRoot({
+      domain: environment.DOMAIN,
+      clientId: environment.CLIENTID
+    }),
   ],
   providers: [],
   bootstrap: [AppComponent]
