@@ -11,26 +11,6 @@ import { AuthService } from '@auth0/auth0-angular';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  /** Based on the screen size, switch from standard to one column per row */
-  cards = this.breakpointObserver.observe(Breakpoints.Handset).pipe(
-    map(({ matches }) => {
-      if (matches) {
-        return [
-          { title: 'Card 1', cols: 2, rows: 1 },
-          { title: 'Card 2', cols: 2, rows: 1 },
-          { title: 'Card 3', cols: 2, rows: 1 },
-          { title: 'Card 4', cols: 2, rows: 1 }
-        ];
-      }
-
-      return [
-        { title: 'Card 1', cols: 2, rows: 1 },
-        { title: 'Card 2', cols: 2, rows: 1 },
-        { title: 'Card 3', cols: 2, rows: 1 },
-        { title: 'Card 4', cols: 2, rows: 1 }
-      ];
-    })
-  );
   //Patient to load
   patient: Patient;
   //Auth0 User

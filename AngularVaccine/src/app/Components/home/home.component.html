@@ -1,28 +1,57 @@
 <app-home-nav>
-  <div class="grid-container">
+  <div class="background">
     <div class="bg-light">
       <h1 class="mat-h1">Welcome {{patient.username}}</h1>
     </div>
-    <mat-grid-list cols="2" rowHeight="350px">
-      <mat-grid-tile *ngFor="let card of cards | async" [colspan]="card.cols" [rowspan]="card.rows">
-        <mat-card class="dashboard-card">
+    <div class="row">
+      <div class="col-md-4">
+        <mat-card>
           <mat-card-header>
-            <mat-card-title>
-              {{card.title}}
-              <button mat-icon-button class="more-button" [matMenuTriggerFor]="menu" aria-label="Toggle menu">
-                <mat-icon>more_vert</mat-icon>
-              </button>
-              <mat-menu #menu="matMenu" xPosition="before">
-                <button mat-menu-item>Expand</button>
-                <button mat-menu-item>Remove</button>
-              </mat-menu>
-            </mat-card-title>
+            <mat-card-title>Schedule Vaccine</mat-card-title>
           </mat-card-header>
-          <mat-card-content class="dashboard-card-content">
-            <div>Card Content Here</div>
+          <img mat-card-image src="/assets/Images/biden-covid-shot.jpg" height="310" width="250" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              Schedule your covid-19 vaccine today at a CVS or Walgreens near you!
+            </p>
           </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Schedule</button>
+          </mat-card-actions>
         </mat-card>
-      </mat-grid-tile>
-    </mat-grid-list>
+      </div>
+      <div class="col-md-4">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>View Pharmacies</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="https://www.tipresource.com/wp-content/uploads/2011/12/cvs-phaarmacy.jpg" height="310" width="250" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              Schedule your covid-19 vaccine today at a CVS or Walgreens near you!
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Schedule</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+      <div class="col-md-4">
+        <mat-card>
+          <mat-card-header>
+            <mat-card-title>Edit Profile</mat-card-title>
+          </mat-card-header>
+          <img mat-card-image src="https://www.tenforums.com/geek/gars/images/2/types/thumb_User_Accounts.png" height="310" width="250" alt="Photo of a Shiba Inu">
+          <mat-card-content>
+            <p>
+              Schedule your covid-19 vaccine today at a CVS or Walgreens near you!
+            </p>
+          </mat-card-content>
+          <mat-card-actions>
+            <button mat-button>Schedule</button>
+          </mat-card-actions>
+        </mat-card>
+      </div>
+    </div>
   </div>
 </app-home-nav>
