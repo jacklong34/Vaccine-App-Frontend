@@ -22,6 +22,7 @@ import { PharmacyComponent } from './Components/pharmacy/pharmacy.component';
 import { AuthModule } from "@auth0/auth0-angular";
 import { AuthButtonComponent } from './Components/auth-button/auth-button.component';
 import { environment } from 'src/environments/environment';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -48,6 +49,7 @@ import { environment } from 'src/environments/environment';
     MatCardModule,
     MatMenuModule,
     RouterModule,
+    HttpClientModule,
     AuthModule.forRoot({
       domain: environment.DOMAIN,
       clientId: environment.CLIENTID

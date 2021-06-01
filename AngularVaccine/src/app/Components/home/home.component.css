@@ -1,5 +1,10 @@
 .grid-container {
-  margin: 20px;
+    background: url('/assets/Images/covid-virus.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    min-height: 100%;
 }
 
 .dashboard-card {
@@ -17,5 +22,10 @@
 }
 
 .dashboard-card-content {
+  text-align: center;
+}
+
+.mat-h1 {
+  padding-top: 10px;
   text-align: center;
 }
